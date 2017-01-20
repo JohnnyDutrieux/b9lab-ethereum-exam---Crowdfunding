@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Crowdfunding project Johnny</title>
+    <style type="text/css" media="screen">
+     * {
+       margin: 0; 
+       padding: 0;
+     }
+     div#main-content { 
+       padding-top: 10px;
+       margin-left: 10%;
+       margin-right: 10%;
+       margin-top: 1%;
+       font-family: "Open Sans", sans-serif;
+    }
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="./app.css" rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <div id="main-content">
+  <img src="./images/ethereumbanner.jpg" style="width:1599px;height:63px;">
+  <p align="center"><b><span id="status"></span></b></p>
+  <br><br><h2>My Account overview</h2>
+  <br><table style="width:45%" id="accountoverview"></table>
+  <br><h2>Project overview</h2>
+  <br><table style="width:70%" id="projects"></table>
+  <br><br><h2>Fund a project</h2>
+  <br><span>To fund to a project, please fill in your account </span>
+  <input type="text" id="sender" placeholder="e.g.,0x8b94ed7b0c9804782705752ef3c28aa074442870"></input>
+  <span> and amount in Wei </span><input type="text" id="amountSend" placeholder="e.g., 5000"></input>
+  <span> then press one of the 'Fund' buttons in the projects overview</span>
+  <br><br><h2>Request a refund</h2>
+  <br><span>To request a refund project, please fill in your account </span>
+  <input type="text" id="retriever" placeholder="e.g.,0x8b94ed7b0c9804782705752ef3c28aa074442870"></input>
+  <span> then press one of the 'refund' buttons in the projects overview.</span>
+  <br><br><h2>Create a new project</h2>
+  <br><span>To create a new project, please fill in fields below and press the create project button</span>
+  <br><br><table style="width:45%" cellpadding:"5px" id="createProject">
+    <tr><td>Project Id</td><td><input type="text" id="projectId" placeholder="e.g., 1"></input></td></tr>
+    <tr><td>Owner account</td><td><input type="text" id="ownerAccount" placeholder="e.g.,0x8b94ed7b0c9804782705752ef3c28aa074442870"></input></td></tr>
+    <tr><td>Amount needed (Wei)</td><td><input type="text" id="amountNeeded" placeholder="e.g., 95"></input></td></tr> 
+    <tr><td>Deadline (hours)</td><td><input type="text" id="deadline" placeholder="e.g., 48"></input></td></tr> 
+  </table>
+  <br><button id="create" onclick="createProject()">Create new project</button>
+  </div>
+</body>
+</html>
